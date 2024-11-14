@@ -16,18 +16,18 @@ public class Main {
         String literalString1 = "abc";
         String literalString2 = "abc";
 
-        String objecString1 = new String("xyz");
-        String objecString2 = new String("XYZ");
+        String objectString1 = new String("xyz");
+        String objectString2 = new String("XYZ");
 
         System.out.println(literalString1 == literalString2); //true
         /* Returns `false` because of the `new String()' string definition */
-        System.out.println(objecString1 == objecString2); 
+        System.out.println(objectString1 == objectString2); 
 
         // The below returns true because of the `.equals` method
         System.out.println(literalString1.equals(literalString2));
 
         // Compares `objecString1` with `objecString2` but ignores the case of the letters
-        System.out.println(objecString1.equalsIgnoreCase(objecString2));
+        System.out.println(objectString1.equalsIgnoreCase(objectString2));
 
         // The variables defined above can also be outputted in the following way 
         String formattedString = String.format("My name is %s. I am from %s. I am %d years old. I work for %s. My GPA is %f", name, country, age, company, gpa);

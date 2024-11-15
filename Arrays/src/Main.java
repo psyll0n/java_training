@@ -77,5 +77,7 @@ public class Main {
         System.out.println("Printing the `copyOfNumbers` array below...");
         System.out.println(Arrays.toString(copyOfNumbers));
 
+        // To compare two arrays use the `.equals` method
+        System.out.println(Arrays.equals(anotherCopyOfNumbers, yetAnotherCopyOfNumbers)); // returns false
     }
 }

@@ -50,5 +50,27 @@ public class Main {
         // The `.binarySearch` method can also use a starting and ending index as search parameters
         int foundItemIndexKey = Arrays.binarySearch(newArray, key);
         System.out.println(foundItemIndexKey);
+
+        // If you want to fill an array with certain values, use the `.fill` method
+        Arrays.fill(newArray, startingIndex, endingIndex, 'z');
+        System.out.println(Arrays.toString(newArray));
+
+        // Arrays in Java are references to specific memory regions
+        int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        int copyOfNumbers[] = numbers;
+
+        // To properly copy an array use the `.copyOf` method
+        System.out.println("Printing the `anotherCopyOfNumbers` array below...");
+        int anotherCopyOfNumbers[] = Arrays.copyOf(numbers, numbers.length);
+        System.out.println(Arrays.toString(anotherCopyOfNumbers));
+
+        Arrays.fill(numbers, 0);
+
+        // This is the reason why modifying the `numbers` array also changes the `copyOfNumbers` array sas well
+        System.out.println("Printing the `numbers` array below...");
+        System.out.println(Arrays.toString(numbers));
+        System.out.println("Printing the `copyOfNumbers` array below...");
+        System.out.println(Arrays.toString(copyOfNumbers));
+
     }
 }

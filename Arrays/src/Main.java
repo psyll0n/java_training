@@ -64,6 +64,11 @@ public class Main {
         int anotherCopyOfNumbers[] = Arrays.copyOf(numbers, numbers.length);
         System.out.println(Arrays.toString(anotherCopyOfNumbers));
 
+        // To copy only a specific range of entries in an array use the `.copyOfRange` method
+        System.out.println("Printing the `yetAnotherCopyOfNumbers` array below...");
+        int yetAnotherCopyOfNumbers[] = Arrays.copyOfRange(numbers, startingIndex, endingIndex);
+        System.out.println(Arrays.toString(yetAnotherCopyOfNumbers));
+
         Arrays.fill(numbers, 0);
 
         // This is the reason why modifying the `numbers` array also changes the `copyOfNumbers` array sas well
